@@ -3,7 +3,7 @@ package keeper
 import (
 	"context"
 	"strconv"
-	
+
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	rules "github.com/smartcoding51/checkers/x/checkers/rules"
 	"github.com/smartcoding51/checkers/x/checkers/types"
@@ -19,11 +19,11 @@ func (k msgServer) CreateGame(goCtx context.Context, msg *types.MsgCreateGame) (
 	newIndex := strconv.FormatUint(nextGame.IdValue, 10)
 	newGame := rules.New()
 	storedGame := types.StoredGame{
-		Index:   newIndex,
-		Game:    newGame.String(),
-		Turn:    rules.PieceStrings[newGame.Turn],
-		Red:     msg.Red,
-		Black:   msg.Black,
+		Index: newIndex,
+		Game:  newGame.String(),
+		Turn:  rules.PieceStrings[newGame.Turn],
+		Red:   msg.Red,
+		Black: msg.Black,
 	}
 	err := storedGame.Validate()
 	if err != nil {
