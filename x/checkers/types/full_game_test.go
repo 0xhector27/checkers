@@ -1,4 +1,3 @@
-
 package types
 
 import (
@@ -6,8 +5,8 @@ import (
 	"testing"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/stretchr/testify/require"
 	"github.com/smartcoding51/checkers/x/checkers/rules"
+	"github.com/stretchr/testify/require"
 )
 
 const (
@@ -18,11 +17,11 @@ const (
 
 func GetStoredGame1() *StoredGame {
 	return &StoredGame{
-		Black:   bob,
-		Red:     carol,
-		Index:   "1",
-		Game:    rules.New().String(),
-		Turn:    "b",
+		Black: bob,
+		Red:   carol,
+		Index: "1",
+		Game:  rules.New().String(),
+		Turn:  "b",
 	}
 }
 
