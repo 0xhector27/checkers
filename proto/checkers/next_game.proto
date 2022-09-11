@@ -1,0 +1,9 @@
+syntax = "proto3";
+package smartcoding51.checkers.checkers;
+
+option go_package = "github.com/smartcoding51/checkers/x/checkers/types";
+
+message NextGame {
+  uint64 idValue = 1; 
+  
+}
