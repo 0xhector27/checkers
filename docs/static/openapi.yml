@@ -51825,6 +51825,8 @@ definitions:
         format: int64
       winner:
         type: string
+  smartcoding51.checkers.checkers.MsgRejectGameResponse:
+    type: object
   smartcoding51.checkers.checkers.NextGame:
     type: object
     properties:
