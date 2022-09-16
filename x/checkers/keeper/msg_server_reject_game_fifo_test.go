@@ -38,6 +38,7 @@ func TestRejectSecondGameHasSavedFifo(t *testing.T) {
 		MoveCount:   uint64(0),
 		BeforeIndex: "-1",
 		AfterIndex:  "-1",
+		Deadline:    types.FormatDeadline(ctx.BlockTime().Add(types.MaxTurnDuration)),
 	}, game2)
 }
 

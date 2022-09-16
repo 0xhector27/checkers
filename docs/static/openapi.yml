@@ -30284,6 +30284,8 @@ paths:
                       type: string
                     afterIndex:
                       type: string
+                    deadline:
+                      type: string
               pagination:
                 type: object
                 properties:
@@ -30417,6 +30419,8 @@ paths:
                   beforeIndex:
                     type: string
                   afterIndex:
+                    type: string
+                  deadline:
                     type: string
         default:
           description: An unexpected error response.
@@ -51883,6 +51887,8 @@ definitions:
               type: string
             afterIndex:
               type: string
+            deadline:
+              type: string
       pagination:
         type: object
         properties:
@@ -51944,6 +51950,8 @@ definitions:
             type: string
           afterIndex:
             type: string
+          deadline:
+            type: string
   smartcoding51.checkers.checkers.QueryParamsResponse:
     type: object
     properties:
@@ -51970,6 +51978,8 @@ definitions:
       beforeIndex:
         type: string
       afterIndex:
+        type: string
+      deadline:
         type: string
   tendermint.spn.monitoringp.ConnectionChannelID:
     type: object
