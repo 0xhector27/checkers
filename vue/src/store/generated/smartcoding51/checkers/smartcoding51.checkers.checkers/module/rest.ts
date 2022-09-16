@@ -29,6 +29,8 @@ export type CheckersMsgRejectGameResponse = object;
 export interface CheckersNextGame {
   /** @format uint64 */
   idValue?: string;
+  fifoHeadIndex?: string;
+  fifoTailIndex?: string;
 }
 
 /**
@@ -76,6 +78,8 @@ export interface CheckersStoredGame {
 
   /** @format uint64 */
   moveCount?: string;
+  beforeIndex?: string;
+  afterIndex?: string;
 }
 
 export interface ProtobufAny {
@@ -126,13 +130,6 @@ export interface V1Beta1PageRequest {
    * is set.
    */
   count_total?: boolean;
-
-  /**
-   * reverse is set to true if results are to be returned in the descending order.
-   *
-   * Since: cosmos-sdk 0.43
-   */
-  reverse?: boolean;
 }
 
 /**
@@ -394,7 +391,6 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
       "pagination.offset"?: string;
       "pagination.limit"?: string;
       "pagination.count_total"?: boolean;
-      "pagination.reverse"?: boolean;
     },
     params: RequestParams = {},
   ) =>

@@ -30192,6 +30192,10 @@ paths:
                   idValue:
                     type: string
                     format: uint64
+                  fifoHeadIndex:
+                    type: string
+                  fifoTailIndex:
+                    type: string
         default:
           description: An unexpected error response.
           schema:
@@ -30276,6 +30280,10 @@ paths:
                     moveCount:
                       type: string
                       format: uint64
+                    beforeIndex:
+                      type: string
+                    afterIndex:
+                      type: string
               pagination:
                 type: object
                 properties:
@@ -30368,6 +30376,16 @@ paths:
           in: query
           required: false
           type: boolean
+        - name: pagination.reverse
+          description: >-
+            reverse is set to true if results are to be returned in the
+            descending order.
+
+
+            Since: cosmos-sdk 0.43
+          in: query
+          required: false
+          type: boolean
       tags:
         - Query
   '/smartcoding51/checkers/checkers/stored_game/{index}':
@@ -30396,6 +30414,10 @@ paths:
                   moveCount:
                     type: string
                     format: uint64
+                  beforeIndex:
+                    type: string
+                  afterIndex:
+                    type: string
         default:
           description: An unexpected error response.
           schema:
@@ -51829,6 +51851,10 @@ definitions:
       idValue:
         type: string
         format: uint64
+      fifoHeadIndex:
+        type: string
+      fifoTailIndex:
+        type: string
   smartcoding51.checkers.checkers.Params:
     type: object
     description: Params defines the parameters for the module.
@@ -51853,6 +51879,10 @@ definitions:
             moveCount:
               type: string
               format: uint64
+            beforeIndex:
+              type: string
+            afterIndex:
+              type: string
       pagination:
         type: object
         properties:
@@ -51887,6 +51917,10 @@ definitions:
           idValue:
             type: string
             format: uint64
+          fifoHeadIndex:
+            type: string
+          fifoTailIndex:
+            type: string
   smartcoding51.checkers.checkers.QueryGetStoredGameResponse:
     type: object
     properties:
@@ -51906,6 +51940,10 @@ definitions:
           moveCount:
             type: string
             format: uint64
+          beforeIndex:
+            type: string
+          afterIndex:
+            type: string
   smartcoding51.checkers.checkers.QueryParamsResponse:
     type: object
     properties:
@@ -51929,6 +51967,10 @@ definitions:
       moveCount:
         type: string
         format: uint64
+      beforeIndex:
+        type: string
+      afterIndex:
+        type: string
   tendermint.spn.monitoringp.ConnectionChannelID:
     type: object
     properties:

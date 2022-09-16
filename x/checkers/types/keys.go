@@ -47,3 +47,7 @@ const (
 	RejectGameEventCreator = "Creator"
 	RejectGameEventIdValue = "IdValue"
 )
+
+const (
+	NoFifoIndex = "-1"
+)

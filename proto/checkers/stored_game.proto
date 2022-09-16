@@ -10,6 +10,7 @@ message StoredGame {
   string red = 4; 
   string black = 5; 
   
-  uint64 moveCount = 7;
+  uint64 moveCount = 6;
+  string beforeIndex = 7;
+  string afterIndex = 8;
 }
-
