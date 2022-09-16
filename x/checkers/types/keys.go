@@ -42,6 +42,7 @@ const (
 	PlayMoveEventCapturedX = "CapturedX"
 	PlayMoveEventCapturedY = "CapturedY"
 	PlayMoveEventWinner    = "Winner"
+	MovePlayedEventBoard   = "board"
 )
 
 const (
